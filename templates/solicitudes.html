@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #4caf50;
+            color: white;
+            overflow: hidden;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+
+        .main-container {
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 80px auto 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-accept {
+            background-color: #4caf50;
+        }
+
+        .btn-reject {
+            background-color: #f44336;
+        }
+
+        .btn-accept:hover {
+            background-color: #45a049;
+        }
+
+        .btn-reject:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="/index_maestro">Inicio</a>
+        <a href="/solicitudes">Solicitudes</a>
+        <a href="/agregar-proyectos">Agregar Proyectos</a>
+        <a href="/alumnos">Alumnos</a>
+    </div>
+
+    <div class="main-container">
+        <h1>Solicitudes Pendientes</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Tipo de Horas</th>
+                    <th>Fecha</th>
+                    <th>Cantidad de Horas</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for solicitud in solicitudes %}
+                <tr>
+                    <td>{{ solicitud[4] }}</td> <!-- Mostrar nombre del usuario -->
+                    <td>{{ solicitud[1] }}</td>
+                    <td>{{ solicitud[2] }}</td>
+                    <td>{{ solicitud[3] }}</td>
+                    <td>
+                        <form action="/aceptar/{{ solicitud[0] }}" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-accept">Aceptar</button>
+                        </form>
+                        <form action="/rechazar/{{ solicitud[0] }}" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-reject">Rechazar</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

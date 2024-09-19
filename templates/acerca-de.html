@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Nosotros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Fondo de la misma paleta que el formulario */
+            color: #000706;
+            text-align: center;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: #4caf50; /* Color de fondo verde */
+            color: white;
+            overflow: hidden;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049; /* Color de fondo al pasar el mouse */
+        }
+
+        .about-section {
+            padding: 80px 20px 50px; /* Ajuste del espacio en la parte superior para compensar la barra de navegación fija */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff; /* Fondo blanco para el contenedor */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .team-member {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .team-name {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .team-role {
+            font-size: 1.2em;
+            color: #010a08;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #4caf50; /* Color de fondo verde */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049; /* Color de fondo al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<div class="navbar">
+    <a href="/index_alumno">Inicio</a>
+    <a href="/formulario">Agregar Horas</a>
+    <a href="/acerca-de">Acerca de</a>
+    <a href="/mostrar">Mis Registros</a>
+</div>
+
+<section class="about-section">
+    <div class="container">
+        <h1 class="section-title">Acerca de este sitio web</h1>
+        <p class="section-description">Este sitio web se creó con el fin de reemplazar las páginas físicas de registro de horas sociales ya que al tener una página en físico esa misma se puede dañar, romper, arrugar, extraviar, y con este sitio web se evitará todos estos inconvenientes y problemas ya que el Ministerio de Educación exige que los bachilleres realicen 200 horas sociales y 50 horas ambientales.</p>
+        <p>¡Bienvenido a nuestra plataforma dedicada a las horas sociales! Nos complace ofrecerte un espacio donde puedes registrar y gestionar tus horas sociales de una manera sencilla y eficiente.</p>
+        <p>Nuestra página web está diseñada para cubrir una amplia gama de actividades, incluyendo seguridad vial, trabajo en bazar, colaboración en actividades de cocina y muchas otras áreas.</p>
+        <p>Nuestro objetivo es brindarte una herramienta completa que te permita documentar tus contribuciones a la comunidad de manera organizada y efectiva. Además de facilitar el registro de horas, también encontrarás recursos útiles, consejos prácticos y noticias relevantes sobre actividades sociales.</p>
+        <p>¡Únete a nuestra comunidad y haz que tus horas sociales cuenten de manera significativa!</p>
+        <div class="team">
+            <div class="team-member">
+
+                <h3 class="team-name">Jonathan Ariel Arevalo Martinez</h3>
+                <p class="team-role">Creador</p>
+            </div>
+            <div class="team-member">
+
+                <h3 class="team-name">Karen Alejandra Najarro Corea</h3>
+                <p class="team-role">Creador</p>
+            </div>
+            <div class="team-member">
+
+                <h3 class="team-name">Fernanda Mariam Paredes Sanchez</h3>
+                <p class="team-role">Creador</p>
+            </div>
+            <div class="team-member">
+
+                <h3 class="team-name">Christopher Addiel Rodríguez Mendez</h3>
+                <p class="team-role">Creador</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="/index_alumno" class="button">Volver al Inicio</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

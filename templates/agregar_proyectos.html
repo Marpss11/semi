@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Proyectos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #4caf50;
+            color: white;
+            overflow: hidden;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 80px auto 20px auto;
+            width: 400px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .links a {
+            text-decoration: none;
+            color: #4caf50;
+            font-size: 16px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/index_maestro">Inicio</a>
+    <a href="/solicitudes">Solicitudes</a>
+    <a href="/agregar-proyectos">Agregar Proyectos</a>
+    <a href="/alumnos">Alumnos</a>
+    <a href="/logout" style="float: right;">Cerrar sesión</a>
+</div>
+
+<div class="container">
+    <h1>Agregar Proyecto</h1>
+    <form action="/add_project" method="post">
+        <div class="form-group">
+            <label for="nombre_proyecto">Nombre del Proyecto:</label>
+            <input type="text" id="nombre_proyecto" name="nombre_proyecto" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Agregar Proyecto</button>
+        </div>
+    </form>
+    <div class="links">
+        <a href="/formulario">Volver al Formulario</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio Maestro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/056/925/small/plain-pastel-emerald-yellowish-green-gradient-abstract-background-use-for-cover-paper-and-background-presentation-illustration-green-tone-copy-space-free-photo.jpg');
+            background-size: 150%; /* Incrementa el tamaño de la imagen al 150% */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; /* Hace que la imagen de fondo permanezca fija al hacer scroll */
+            color: white; /* Para que el texto sea visible sobre el fondo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Asegura que el contenido ocupe toda la altura de la pantalla */
+        }
+
+        .navbar {
+            background-color: rgba(76, 175, 80, 0.9); /* Color de fondo verde con opacidad */
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        h1, p {
+            color: white; /* Asegura que el texto sea visible sobre el fondo */
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/index_maestro">Inicio</a>
+    <a href="/solicitudes">Solicitudes</a>
+    <a href="/agregar-proyectos">Agregar Proyectos</a>
+    <a href="/alumnos">Alumnos</a>
+    <a href="/logout" style="float: right;">Cerrar sesión</a>
+</div>
+
+<div class="content">
+    <h1>Bienvenido, Maestro</h1>
+</div>
+
+</body>
+</html>

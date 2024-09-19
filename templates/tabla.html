@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Horas Sociales</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #4caf50;
+            color: white;
+            overflow: hidden;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .links a {
+            text-decoration: none;
+            color: #4caf50;
+            font-size: 16px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/index_alumno">Inicio</a>
+    <a href="/formulario">Agregar Horas</a>
+    <a href="/acerca-de">Acerca de</a>
+    <a href="/mostrar">Mis Registros</a>
+</div>
+
+<div class="container">
+    <h1>Horas Confirmadas</h1>
+    <!-- Ejemplo de tabla para mostrar registros confirmados -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Proyecto</th>
+                <th>Fecha</th>
+                <th>Horas</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in registros_confirmados %}
+            <tr>
+                <td>{{ registro[0] }}</td>
+                <td>{{ registro[1] }}</td>
+                <td>{{ registro[2] }}</td>
+                <td>{{ registro[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+    <h1>Horas Pendientes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Proyecto</th>
+                <th>Fecha</th>
+                <th>Cantidad de Horas</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for solicitud in solicitudes_pendientes %}
+                <tr>
+                    <td>{{ solicitud[0] }}</td>
+                    <td>{{ solicitud[1] }}</td>
+                    <td>{{ solicitud[2] }}</td>
+                    <td>{{ solicitud[3] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="links">
+        <a href="/formulario">Volver al formulario</a>
+    </div>
+</div>
+
+</body>
+</html>

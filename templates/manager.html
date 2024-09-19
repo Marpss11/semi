@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/056/925/small/plain-pastel-emerald-yellowish-green-gradient-abstract-background-use-for-cover-paper-and-background-presentation-illustration-green-tone-copy-space-free-photo.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .navbar {
+            background-color: rgba(76, 175, 80, 0.8);
+            color: white;
+            overflow: hidden;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 80px auto;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/manager">Inicio</a>
+    <a href="/agregar_usuario">Agregar Usuario</a>
+    <a href="/eliminar_usuario">Eliminar Usuario</a>
+    <a href="/usuarios">Usuarios</a> <!-- Nuevo botón de Usuarios -->
+    <a href="/logout" style="float: right;">Cerrar sesión</a>
+</div>
+
+<div class="container">
+    <h1>Bienvenido, Manager</h1>
+</div>
+
+</body>
+</html>
